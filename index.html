@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b14" />
+    <title>💗</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" />
+</head>
+
+<body>
+    <!-- LOADING -->
+    <div id="loading" aria-label="Đang tải">
+        <div class="loading-title">Đang tải...</div>
+        <div class="progress-wrap">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <!-- HOLD TO START -->
+    <div id="start-wrap" aria-label="Giữ để bắt đầu">
+        <div id="start-label">Giữ để bắt đầu</div>
+        <svg viewBox="0 0 78 78" aria-hidden="true">
+            <circle class="ring-pulse" cx="39" cy="39" r="32"></circle>
+            <circle class="ring-track" cx="39" cy="39" r="30"></circle>
+            <circle class="ring-fill" id="ring-fill" cx="39" cy="39" r="30"></circle>
+        </svg>
+    </div>
+
+    <!-- Three.js canvas -->
+    <canvas id="webglCanvas"></canvas>
+
+    <!-- Fireworks canvas -->
+    <canvas id="fx"></canvas>
+
+    <!-- Envelope stage -->
+    <div class="stage">
+        <div class="envelope-wrap" id="envelopeWrap">
+            <div class="envelope" id="envelope">
+                <div class="flap"></div>
+                <div class="body-tri-left"></div>
+                <div class="body-tri-right"></div>
+                <div class="body-bottom"></div>
+
+                <div class="inner-letter" id="innerLetter"></div>
+
+                <button class="seal" id="sealBtn" type="button">
+                    <span>💌</span>
+                </button>
+
+                <div class="tag" id="tag">Nhấn 💌 để mở </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final letter -->
+    <div class="big-letter" id="bigLetter" aria-label="thư chúc mừng">
+        <div class="big-inner">
+
+            <div class="lines" id="paper">
+                <p class="text" id="typed"></p>
+                <div class="sig">
+                    <span>—</span><b id="fromName">Từ bạn</b> <span>💗</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="bgm" src="bgm.mp3" preload="auto" loop></audio>
+    <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+    }
+  }
+  </script>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>mj
